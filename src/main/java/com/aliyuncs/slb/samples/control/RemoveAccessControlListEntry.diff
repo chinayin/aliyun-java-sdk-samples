@@ -1,0 +1,17 @@
+# RemoveAccessControlListEntry.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+AclEntrys 类型不对 应为List sdk中为String
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+AclEntrys 类型不对 应为List sdk中为String
+
+## response
+

@@ -1,0 +1,24 @@
+# DescribeMasterSlaveServerGroupAttribute.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+查看当前文档 链接失效
+
+
+## response
+
+1. sdk 冗余属性
+
+MasterSlaveBackendServer类 与文档不一致 这仨都没值
+.getEniHost()
+.getServerIp()
+.getVpcId()
+

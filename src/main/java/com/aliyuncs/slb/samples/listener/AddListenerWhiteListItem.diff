@@ -1,0 +1,26 @@
+# AddListenerWhiteListItem.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+
+2. api 平台 冗余属性 (注意sdk冗余属性)
+
+access_key_id
+Tags
+
+3. 执行失败
+com.aliyuncs.exceptions.ServerException: InternalError : The request processing has failed due to some unknown error, exception or failure.
+RequestId : 7EC1F07A-53E3-4F3D-A801-292A71EC5AA1
+
+监听的AccessControlStatus为open_white_list时有效。
+文档中说明 访问控制开启后有效  未开启不会报错 不过又没效果
+在控制台开启后 只能选择已存在规则
+如果监听存在访问规则  又会报错误
+感觉这个设计是有问题的
+
+## response
+

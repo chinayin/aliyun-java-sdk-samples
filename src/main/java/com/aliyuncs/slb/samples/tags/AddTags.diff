@@ -1,0 +1,14 @@
+# AddTags.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+
+2. sdk 字段类型错误
+
+Tags 文档上是List  sdk中是String
+
+
+## response
+

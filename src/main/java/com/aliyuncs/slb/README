@@ -1,0 +1,50 @@
+#  SLB JAVA SDK 体检
+
+2018-07-25
+by  whereismoney@qq.com
+
+#### 总计核对 61 个接口
+
+### 文件说明
+* 包文件 com.aliyuncs.slb.samples
+* 测试配置文件 /aliyun-java-sdk-samples/src/resources/ak.properties
+* .java 工程测试文件
+* .md   示例代码      【可提交到文档平台，sample】
+* .diff 纠错文件       挨个接口对应的错误
+* 在diff文件中标记 !!严重!!，需迫切解决
+
+### 名词解释
+* 文档 指 https://help.aliyun.com/document_detail/50507.html等API参考文档
+* api平台 指 api.aliyun.com
+* sdk 指 java sdk
+
+### 大问题整理，小问题请看接口对应的diff文件
+
+1. 文档中至少一半文档中RegionId，是否必须选项，不准确
+有的地方“是” 不过远程调用api非必填项
+【建议】 统一标准  另外请确认RegionId是否是必须的 因为在创建client时候已经设置RegionId
+
+2. 文档中标注类型为List，在sdk中实现为String
+涉及地方 都在diff文件中标注
+【建议】 request中List<Object>，用户可按照Object属性方便设置参数，提交时转JSONArray
+
+3. request中，多余属性 access_key_id   tags
+【建议】 批量替换
+
+4. 缺失属性，多余属性，见每个接口对应diff文件
+
+5. api平台中 "查看当前文档" 部分链接指向不对
+
+6. AddListenerWhiteListItem 接口错误  已存在访问控制管理和绑定接口 这个单独配置是否有问题?
+com.aliyuncs.exceptions.ServerException: InternalError : The request processing has failed due to some unknown error, exception or failure.
+RequestId : 7EC1F07A-53E3-4F3D-A801-292A71EC5AA1
+监听的AccessControlStatus为open_white_list时有效。
+文档中说明 访问控制开启后有效  未开启不会报错 不过又没效果
+在控制台开启后 只能选择已存在规则
+如果监听存在访问规则  又会报错误
+感觉这个设计是有问题的
+
+com.aliyuncs.exceptions.ClientException: WhiteListDeprecated : white list access control is deprecated after acl is enabled
+发现了这个错误.. 那这些接口可以删除了
+
+7....

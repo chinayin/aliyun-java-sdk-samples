@@ -1,0 +1,19 @@
+# CreateRules.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+sdk中属性RuleList  api平台RuleList  文档中是Rules  !!严重!!
+com.aliyuncs.exceptions.ClientException: InvalidParameter : RuleList is malformed.
+
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+
+## response
+

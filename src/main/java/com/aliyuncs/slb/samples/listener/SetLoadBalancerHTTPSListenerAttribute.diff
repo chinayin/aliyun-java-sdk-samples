@@ -1,0 +1,24 @@
+# SetLoadBalancerHTTPSListenerAttribute.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+sdk中存在VpcIds 文档中不存在
+sdk中存在MaxConnection 文档中不存在
+sdk中存在EnableHttp2  文档中不存在
+
+sdk中 ServerCertificateId 设置后 api报错
+com.aliyuncs.exceptions.ClientException: InvalidParameter : The specified parameter ServerCertificateId is empty.
+
+
+2. api 平台 冗余属性 (注意sdk冗余属性)
+
+access_key_id
+Tags
+
+
+## response
+

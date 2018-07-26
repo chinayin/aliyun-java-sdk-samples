@@ -1,0 +1,32 @@
+# DeleteMasterSlaveServerGroup.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+MasterSlaveBackendServers 类型不对 应为List sdk中为String
+
+文档中说明 MasterSlaveBackendServers 非必填  接口返回以下错误
+com.aliyuncs.exceptions.ClientException: BackendServer.Empty : The specified BackendServers can not be empty.
+
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+
+查看当前文档 链接失效
+
+3. 文档中 请求参数  RegionIdE  多了个e
+https://help.aliyun.com/document_detail/50506.html?spm=a2c4g.11186623.6.770.a5AlKW
+
+## response
+
+1. sdk 冗余属性
+
+MasterSlaveBackendServer类 与文档不一致
+.getEniHost()
+.getServerIp()
+.getVpcId()
+

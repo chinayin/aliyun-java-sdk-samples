@@ -1,0 +1,21 @@
+# DescribeAccessControlLists.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+AddressIPVersion
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+AddressIPVersion
+
+## response
+
+1. sdk 冗余属性
+
+DescribeAccessControlListsResponse.Acl类 .getAddressIPVersion()  返回有这个 在文档中未看到返回参数
+

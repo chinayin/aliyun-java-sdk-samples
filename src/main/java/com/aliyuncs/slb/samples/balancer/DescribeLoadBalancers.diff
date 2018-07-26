@@ -1,0 +1,31 @@
+# SetLoadBalancerName.diff
+
+## request
+1. sdk 冗余参数
+
+access_key_id
+
+
+2. api平台
+
+分页是否存在??
+
+3. sdk 字段类型错误
+
+Tags 文档上是List  sdk中是String
+
+
+## response
+1. sdk 缺失参数
+
+Bandwidth
+LoadBalancerSpec
+
+2. sdk 多余参数  与文档不一致
+null                System.out.println(it.getEndTimeStamp());
+4                System.out.println(it.getInternetChargeType());
+PayOnDemand                System.out.println(it.getPayType());
+null                System.out.println(it.getRenewalCycUnit());
+null                System.out.println(it.getRenewalDuration());
+null                System.out.println(it.getRenewalStatus());
+rg-aek2exs57pymbui                System.out.println(it.getResourceGroupId());

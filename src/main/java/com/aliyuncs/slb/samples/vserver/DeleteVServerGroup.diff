@@ -1,0 +1,16 @@
+# DeleteVServerGroup.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+
+## response
+
+

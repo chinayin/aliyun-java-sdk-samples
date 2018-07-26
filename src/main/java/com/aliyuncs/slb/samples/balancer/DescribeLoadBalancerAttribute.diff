@@ -1,0 +1,41 @@
+# SetLoadBalancerName.diff
+
+## request
+1. sdk 冗余参数
+
+access_key_id
+tags
+
+2. sdk 字段类型错误
+
+Tags 文档上是List  sdk中是String
+
+
+## response
+1. sdk 缺失参数
+
+LoadBalancerSpec
+
+2. sdk 多余参数  与文档不一致
+
+多余参数
+.getEndTimeStamp()
+.getInternetChargeType()
+.getPayType()
+.getResourceGroupId()
+
+文档只有其中之一
+.getListenerPortsAndProtocal()
+.getListenerPortsAndProtocol()
+
+
+BackendServer类 多了以下属性 文档中没有
+type
+serverIp
+eniHost
+vpcId
+
+ListenerPortsAndProtocol类 多了以下属性 文档中没有
+listenerForward
+forwardPort
+

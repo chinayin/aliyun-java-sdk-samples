@@ -1,0 +1,24 @@
+# AddVServerGroupBackendServers.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+BackendServers 类型不对 应为List sdk中为String
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+BackendServers 类型不对 应为List sdk中为String
+
+## response
+
+1. sdk 冗余属性
+
+BackendServer类 与文档不一致
+.getEniHost()
+.getServerIp()
+.getVpcId()
+

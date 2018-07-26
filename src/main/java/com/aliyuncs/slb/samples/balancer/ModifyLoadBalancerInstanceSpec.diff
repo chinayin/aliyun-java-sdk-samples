@@ -1,0 +1,19 @@
+# ModifyLoadBalancerInstanceSpec.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+Tags
+autopay
+
+2. api平台
+
+RegionId  不是必填
+尝试可以执行  意味着文档里必填写的是错的
+
+## response
+
+1. sdk 冗余属性
+
+orderId

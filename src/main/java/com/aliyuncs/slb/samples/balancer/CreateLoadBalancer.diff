@@ -1,0 +1,55 @@
+# CreateLoadBalancer.diff
+
+## request
+1. access_key_id 多余
+影响范围:
+* api平台 https://api.aliyun.com/?#product=Slb&api=CreateLoadBalancer
+* sdk
+```
+private String access_key_id;
+public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
+		}
+	}
+```
+
+2. Tags 多余 (sdk)
+影响范围:
+* api平台 https://api.aliyun.com/?#product=Slb&api=CreateLoadBalancer
+* sdk
+```
+private String tags;
+public String getTags() {
+		return this.tags;
+	}
+
+	public void setTags(String tags) {
+		this.tags = tags;
+		if(tags != null){
+			putQueryParameter("Tags", tags);
+		}
+	}
+```
+
+
+## response
+
+1. sdk 缺失字段
+
+MasterZoneId
+SlaveZoneId
+LoadBalancerSpec
+
+
+2. sdk 冗余属性
+
+orderId
+
+3. sdk 字段不明确
+
+addressIPVersion

@@ -1,0 +1,19 @@
+# ModifyLoadBalancerInternetSpec.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+Tags
+AutoPay
+
+2. api平台
+
+RegionId  不是必填
+
+
+## response
+
+1. sdk 冗余属性
+
+orderId

@@ -1,0 +1,18 @@
+# AddAccessControlListEntry.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+AclEntrys 类型不对 应为List sdk中为String
+
+2. api 平台 冗余属性
+
+access_key_id
+Tags
+AclId 非必填
+AclEntrys 类型不对 应为List sdk中为String
+
+## response
+

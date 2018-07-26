@@ -1,0 +1,21 @@
+# SetListenerAccessControlStatus.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+
+2. api 平台 冗余属性 (注意sdk冗余属性)
+
+access_key_id
+Tags
+
+3. 呃..  白写了
+com.aliyuncs.exceptions.ClientException: WhiteListDeprecated : white list access control is deprecated after acl is enabled
+RequestId : C0CD65DE-D387-45FC-A9C0-72E10DCED193
+
+
+## response
+

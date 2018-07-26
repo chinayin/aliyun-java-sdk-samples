@@ -1,0 +1,22 @@
+# SetLoadBalancerHTTPListenerAttribute.diff
+
+## request
+1. sdk 冗余属性
+
+access_key_id
+tags
+
+sdk中存在VpcIds 文档中不存在
+sdk中存在MaxConnection 文档中不存在
+
+2. api 平台 冗余属性 (注意sdk冗余属性)
+
+access_key_id
+Tags
+
+3. 文档
+
+XForwardedFor 参数未加粗
+
+## response
+
